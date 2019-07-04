@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="news" extends="default" namespace="/">
+		
+		<action name="news_*" class="com.company.action.news.NewsAction" method="{1}">
+		    
+		    <!-- 跳转至品牌新闻列表页面 -->
+		    <result name="loadNews">/WEB-INF/page/news.jsp</result>
+		    
+		     <!-- 跳转至品牌新闻明细页面 -->
+		    <result name="loadNewsDetial">/WEB-INF/page/newsdetail.jsp</result>
+
+		</action>
+	</package>
+</struts>

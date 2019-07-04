@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="work" extends="default" namespace="/">
+		
+		<action name="work_*" class="com.company.action.work.WorkAction" method="{1}">
+		    
+		    <!-- 跳转至人才招聘列表页面 -->
+		    <result name="loadWork">/WEB-INF/page/work.jsp</result>
+		    
+		     <!-- 跳转至人才招聘明细页面 -->
+		    <result name="loadWorkDetial">/WEB-INF/page/workdetail.jsp</result>
+
+		</action>
+	</package>
+</struts>

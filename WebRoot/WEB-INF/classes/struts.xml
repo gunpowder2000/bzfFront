@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+    <package name="default" extends="struts-default" namespace="/">
+        <interceptors>
+			<interceptor name="exception" class="com.opensymphony.xwork2.interceptor.ExceptionMappingInterceptor"/>
+			
+	      	<interceptor-stack name="defaultStack">
+				<interceptor-ref name="exception"/>
+	      	</interceptor-stack>
+        </interceptors>
+        
+<!-- 	    <global-results>
+	   		<result name="error">/error.jsp</result>
+		</global-results> -->
+	
+		<global-exception-mappings>
+		    <exception-mapping result="error" exception="java.lang.Exception"/>
+		    <exception-mapping result="error" exception="java.sql.SQLException"/>
+		</global-exception-mappings>
+    </package>
+    
+    <include file="struts\index.xml"></include>
+    <include file="struts\top.xml"></include>
+    <include file="struts\about.xml"></include>
+    <include file="struts\news.xml"></include>
+    <include file="struts\join.xml"></include>
+    <include file="struts\work.xml"></include>
+    <include file="struts\goods.xml"></include>
+
+</struts>

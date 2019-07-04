@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="join" extends="default" namespace="/">
+		
+		<action name="join_*" class="com.company.action.join.JoinAction" method="{1}">
+		    
+		    <!-- 跳转至加盟方式内容页面 -->
+		    <result name="loadJoin">/WEB-INF/page/join.jsp</result>
+
+		</action>
+	</package>
+</struts>

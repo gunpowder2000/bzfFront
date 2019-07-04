@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="goods" extends="default" namespace="/">
+		
+		<action name="goods_*" class="com.company.action.goods.GoodsAction" method="{1}">
+		    
+		    <!-- 跳转至商品列表内容页面 -->
+		    <result name="loadGoods">/WEB-INF/page/goods.jsp</result>
+
+			<!-- 跳转至商品明细内容页面 -->
+		    <result name="loadGoodsDetial">/WEB-INF/page/goodsdetail.jsp</result>
+		    
+		</action>
+	</package>
+</struts>

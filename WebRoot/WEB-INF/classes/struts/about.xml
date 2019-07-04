@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+<struts>
+	<package name="about" extends="default" namespace="/">
+		
+		<action name="about_*" class="com.company.action.about.AboutAction" method="{1}">
+		    
+		    <!-- 跳转至关于公司内容页面 -->
+		    <result name="loadAbout">/WEB-INF/page/about.jsp</result>
+
+		</action>
+	</package>
+</struts>
